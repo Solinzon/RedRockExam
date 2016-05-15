@@ -108,25 +108,9 @@ public class AnalyzeAPI implements Runnable {
                         mSongs.setSongname(jsonObject.getString("songname"));
                         Log.d(TAG, "parseJsonWithJsonObject: "+jsonObject.getString("songname"));
                         Log.d(TAG, "parseJsonWithJsonObject: >>>>>>>>>>>>>>>>>>>>>>>"+i);
-                     if(position==0){
+
                          Songs.mySongs_om.add(mSongs);
-                     }else if(position==1){
-                         Songs.mySongs_nd.add(mSongs);
-                     }else if(position==2){
-                         Songs.mySongs_gt.add(mSongs);
-                     }else if(position==3){
-                         Songs.mySongs_hg.add(mSongs);
-                     }else if(position==4){
-                         Songs.mySongs_rb.add(mSongs);
-                     }else if(position==5){
-                         Songs.mySongs_my.add(mSongs);
-                     }else if(position==6){
-                         Songs.mySongs_yg.add(mSongs);
-                     }else if(position==7){
-                         Songs.mySongs_xl.add(mSongs);
-                     }else if(position==8){
-                         Songs.mySongs_rg.add(mSongs);
-                     }
+
 
                 }catch (Exception e){
                     Log.d(TAG, "parseJsonWithJsonObject: 解析有点问题哟");

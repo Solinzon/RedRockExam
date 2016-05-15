@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MainActivity";
     Button hotMusic;
     Button listMusic;
+    Button recentMusic;
     private ViewPager mViewPager;
     private TextView mTextView;
     private LinearLayout ll;
@@ -81,6 +82,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         listMusic= (Button) findViewById(R.id.button_list_music);
+        listMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,RecentActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

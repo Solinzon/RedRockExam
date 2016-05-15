@@ -18,7 +18,7 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_margin="3dp"
-            android:src="#666666"/>
+            android:src="@drawable/aa"/>
         <TextView
             android:id="@+id/tv_hotMusic_songName"
             android:layout_width="190dp"

@@ -36,6 +36,7 @@ public class WellcomeActivity extends Activity {
             public void onSuccess() throws MalformedURLException {
                 Log.d("HotMusicActivity", "onSuccess: 终于成功了,欧美的大小是："+ Songs.mySongs_om.size());
                 handler.sendEmptyMessage(SHOW_IMAGE);
+                handler.sendEmptyMessageDelayed(START_ACTIVITY,2*1000);
             }
 
             @Override
@@ -45,7 +46,7 @@ public class WellcomeActivity extends Activity {
         },0);
 
 
-              handler.sendEmptyMessageDelayed(START_ACTIVITY,3*1000);
+
     }
 
     private Handler handler = new Handler(){
@@ -58,13 +59,25 @@ public class WellcomeActivity extends Activity {
                     finish();
                     break;
                 case SHOW_IMAGE:
-                    //Toast.makeText(WellcomeActivity.this, "欢迎体验", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(WellcomeActivity.this, "欢迎进入", Toast.LENGTH_SHORT).show();
                     break;
                 case SHOW_TOAST:
-                    Toast.makeText(WellcomeActivity.this, "网络好像不太流畅 (ಥ _ ಥ)", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(WellcomeActivity.this, "网络好像不太流畅 (ಥ _ ಥ)，联了网再试吧", Toast.LENGTH_LONG).show();
+
+                    handler1.sendEmptyMessageDelayed(5,3*1000);
+
             }
         }
     };
+    Handler handler1=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
 
+            if(msg.what==5){
+                finish();
+            }
+        }
+    };
 
 }

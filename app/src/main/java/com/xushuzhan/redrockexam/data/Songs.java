@@ -8,14 +8,14 @@ import java.util.ArrayList;
 public class Songs {
 
     public static final ArrayList<Songs> mySongs_om= new ArrayList<>();
-    public static final ArrayList<Songs> mySongs_nd= new ArrayList<>();
-    public static final ArrayList<Songs> mySongs_gt= new ArrayList<>();
-    public static final ArrayList<Songs> mySongs_hg= new ArrayList<>();
-    public static final ArrayList<Songs> mySongs_rb= new ArrayList<>();
-    public static final ArrayList<Songs> mySongs_my= new ArrayList<>();
-    public static final ArrayList<Songs> mySongs_yg= new ArrayList<>();
-    public static final ArrayList<Songs> mySongs_xl= new ArrayList<>();
-    public static final ArrayList<Songs> mySongs_rg= new ArrayList<>();
+//    public static final ArrayList<Songs> mySongs_nd= new ArrayList<>();
+//    public static final ArrayList<Songs> mySongs_gt= new ArrayList<>();
+//    public static final ArrayList<Songs> mySongs_hg= new ArrayList<>();
+//    public static final ArrayList<Songs> mySongs_rb= new ArrayList<>();
+//    public static final ArrayList<Songs> mySongs_my= new ArrayList<>();
+//    public static final ArrayList<Songs> mySongs_yg= new ArrayList<>();
+//    public static final ArrayList<Songs> mySongs_xl= new ArrayList<>();
+//    public static final ArrayList<Songs> mySongs_rg= new ArrayList<>();
 
 
 

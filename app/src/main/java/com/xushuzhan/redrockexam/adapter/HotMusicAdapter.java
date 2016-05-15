@@ -54,6 +54,7 @@ public class HotMusicAdapter extends RecyclerView.Adapter<HotMusicAdapter.MyView
         pageTAG = tag;
         adaptercontext=context;
         FileUtils fileUtils = new FileUtils(context);
+
         Log.d(TAG, "HotMusicAdapter: "+pageTAG);
 
     }
@@ -104,69 +105,13 @@ public class HotMusicAdapter extends RecyclerView.Adapter<HotMusicAdapter.MyView
         }catch (Exception e){
             Toast.makeText(adaptercontext, "亲,你可能没有联网哟", Toast.LENGTH_SHORT).show();
         }
-//        else if(pageTAG.equals("港台")){
-//            Log.d(TAG, "onBindViewHolder: 这里是内地哟！！！");
-//            holder.songName.setText(Songs.mySongs_nd.get(position).getSongname());
-//            holder.singerName.setText(Songs.mySongs_nd.get(position).getSingername());
-//
-//            if(Songs.mySongs_nd!=null&&Songs.mySongs_nd.size()!=0) {
-//                final ImageDownloader mImageDownloader = new ImageDownloader(adaptercontext);
-//                Log.d(TAG, "onBindViewHolder: Image.girlsURL.size()="+Songs.mySongs_nd.size());
-//
-//                String myGirlsUrl = Songs.mySongs_nd.get(position).getAlbumpic_small();
-//                Bitmap bitmap = mImageDownloader.downLoadImage(myGirlsUrl, new ImageDownloader.onImageDownloaderListener() {
-//                    @Override
-//                    public void onImageLoader(Bitmap bitmap, String url) {
-//                        holder.albumPic.setImageBitmap(bitmap);
-//                        Log.d(TAG, "onImageLoader: 回调中的if被执行啦,bitmap数组的大小是");
-//                    }
-//                });
-//                if (bitmap != null) {
-//                    holder.albumPic.setImageBitmap(bitmap);
-//                    Log.d(TAG, "ShowPicture: 已经下载过图片啦！第二个if执行了,bitmap数组的大小是");
-//                }
-//            }
-//        }else if(pageTAG.equals("韩国")){
-//            Log.d(TAG, "onBindViewHolder: 这里是港台哟！！！");
-//        }else if(pageTAG.equals("日本")){
-//            Log.d(TAG, "onBindViewHolder: 这里是韩国哟！！！");
-//        }else if(pageTAG.equals("民谣")){
-//            Log.d(TAG, "onBindViewHolder: 这里是日本哟！！！");
-//        }else if(pageTAG.equals("摇滚")){
-//            Log.d(TAG, "onBindViewHolder: 这里是民谣哟！！！");
-//        }else if(pageTAG.equals("销量")){
-//            Log.d(TAG, "onBindViewHolder: 这里是摇滚哟！！！");
-//        }else if(pageTAG.equals("热歌")){
-//            Log.d(TAG, "onBindViewHolder: 这里是销量哟！！！");
-//        }else {
-//            Log.d(TAG, "onBindViewHolder: 这里是热歌哟！！！");
-//        }
 
 
     }
 
     @Override
     public int getItemCount() {
-//        if(pageTAG.equals("欧美")) {
-//            return Songs.mySongs_om.size();
-//        }else if(pageTAG.equals("港台")){
-//            return Songs.mySongs_nd.size();
-//        }else if(pageTAG.equals("韩国")){
-//            return Songs.mySongs_gt.size();
-//        }else if(pageTAG.equals("日本")){
-//            return Songs.mySongs_hg.size();
-//        }else if(pageTAG.equals("民谣")){
-//            return Songs.mySongs_rb.size();
-//        }else if(pageTAG.equals("摇滚")){
-//            return Songs.mySongs_my.size();
-//        }else if(pageTAG.equals("销量")){
-//            return Songs.mySongs_yg.size();
-//        }else if(pageTAG.equals("热歌")){
-//            return Songs.mySongs_xl.size();
-//        }else {
-//            return Songs.mySongs_rg.size();
-//        }
-        return 20;
+            return Songs.mySongs_om.size();
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {

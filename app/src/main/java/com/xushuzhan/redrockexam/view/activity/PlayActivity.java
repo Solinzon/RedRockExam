@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
-import android.os.Environment;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,11 +20,10 @@ import android.widget.TextView;
 import com.xushuzhan.redrockexam.R;
 import com.xushuzhan.redrockexam.Utils.FileUtils;
 import com.xushuzhan.redrockexam.Utils.ImageDownloader;
-import com.xushuzhan.redrockexam.data.Songs;
+import com.xushuzhan.redrockexam.Utils.SQLiteUtil;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -51,11 +49,18 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
     String albumBigPic;
     String songId;
     String downloadUrl;
+    String albumSmallPic;
+    SQLiteUtil sqLiteUtil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
+        sqLiteUtil = SQLiteUtil.getInstance();
         initView();
+
+
+
+
         play.setOnClickListener(this);
         pause.setOnClickListener(this);
         stop.setOnClickListener(this);
@@ -67,6 +72,8 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
         albumBigPic = intent.getStringExtra("album_big_pic");
         songId=intent.getStringExtra("song_id");
         downloadUrl=intent.getStringExtra("url");
+        albumSmallPic=intent.getStringExtra("album_small_pic");
+
         Log.d("111", "onCreate: "+downloadUrl);
 
 
@@ -104,7 +111,12 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.play:
                 if (!mediaPlayer.isPlaying()) {
                     mediaPlayer.start(); // 开始播放
-                }
+                    try {
+                        sqLiteUtil.insertSong("music", singerName, songName, albumSmallPic, albumBigPic, m4a);
+                    }catch (Exception e){
+                        Log.d("123123", "onClick: "+e.getMessage());
+                    }
+                    }
                 break;
             case R.id.pause:
                 if (mediaPlayer.isPlaying()) {

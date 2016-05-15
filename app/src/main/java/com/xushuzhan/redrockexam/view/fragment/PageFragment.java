@@ -39,8 +39,8 @@ public class PageFragment extends Fragment {
 
 
     /**
-     * 在这里我们提供一个静态的方法来实例化PageFragment
-     * 在这里我们传入一个参数，用来得到title，然后我们拿到这个title设置给内容
+     * 提供一个静态的方法来实例化PageFragment
+     * 传入一个参数，用来得到title，然后我们拿到这个title设置给内容
      *
      * @param extra
 
@@ -77,6 +77,7 @@ public class PageFragment extends Fragment {
 //        mTextView = (TextView) mView.findViewById(R.id.text_fragment);
 //        mTextView.setText(title);
         try {
+
             recyclerview = (RecyclerView) mView.findViewById(R.id.hot_music_recyclerview);
             recyclerview.setLayoutManager(new LinearLayoutManager(mView.getContext()));
             HotMusicAdapter adapter = new HotMusicAdapter(title, getContext());
@@ -93,6 +94,7 @@ public class PageFragment extends Fragment {
                     intent.putExtra("album_big_pic", clickedSongs.getAlbumpic_big());
                     intent.putExtra("song_di", clickedSongs.getSongid());
                     intent.putExtra("url", clickedSongs.getDownUrl());
+                    intent.putExtra("album_small_pic",clickedSongs.getAlbumpic_small());
                     startActivity(intent);
 
                 }

@@ -3,9 +3,9 @@
     package="com.xushuzhan.redrockexam">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
     <application
         android:allowBackup="true"
@@ -23,7 +23,8 @@
         </activity>
         <activity android:name=".view.activity.HotMusicActivity" />
         <activity android:name=".view.activity.MainActivity" />
-        <activity android:name=".view.activity.PlayActivity"></activity>
+        <activity android:name=".view.activity.PlayActivity" />
+        <activity android:name=".view.activity.RecentActivity"></activity>
     </application>
 
 </manifest>
