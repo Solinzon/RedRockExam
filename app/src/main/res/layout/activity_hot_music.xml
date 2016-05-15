@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="2dp"
+    tools:context=".view.activity.MainActivity">
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+            <!--直接启动fragment-->
+        <fragment
+            android:id="@+id/main_info_fragment"
+            class="com.xushuzhan.redrockexam.view.fragment.MainFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"/>
+
+
+    </FrameLayout>
+</RelativeLayout>

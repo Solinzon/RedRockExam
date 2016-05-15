@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:id="@+id/my_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#666666"
+            />
+
+    <TextView
+        android:id="@+id/noti_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15#"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/noti_pd"
+        android:layout_toEndOf="@+id/my_icon"
+        android:layout_toRightOf="@+id/my_icon" />
+
+    <ProgressBar
+        android:id="@+id/noti_pd"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/my_icon"
+        android:layout_toEndOf="@+id/my_icon"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/my_icon" />
+
+</RelativeLayout>
