@@ -29,6 +29,14 @@
 2. 主页模仿QQ音乐的“音乐馆”界面做了一个轮播图，轮播图可以点击，并且打开浏览器跳转到相应网页。
 3. 进入“热歌”首次加载图片时会一边滑动一边加载，并弹出dialog，之后直接从缓存加载。
 
+APK链接： http://pan.baidu.com/s/1slnCqjb
+
+![](http://i.imgur.com/0hSbBxs.jpg)
+![](http://i.imgur.com/7OFx8tH.jpg)
+![](http://i.imgur.com/OAtKsgQ.jpg)
+![](http://i.imgur.com/rX7OO1Y.jpg)
+
+
 
 ##最后
 ####功能没又做多少，期间遇到了各种问题，不过还是挺感谢这次考核的，学到了不少东西，最大的收获是会写一些工具类了，代码风格比以前好多了（当然还是很渣）。
